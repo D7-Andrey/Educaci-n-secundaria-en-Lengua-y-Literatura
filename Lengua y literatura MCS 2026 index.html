@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso lectivo 2026: lengua y literatura</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #2c3e50; --accent: #3498db; --steam-gold: #f1c40f; --bg: #f4f7f6; }
+        body { font-family: 'Montserrat', sans-serif; background-color: var(--bg); margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; overflow: hidden; }
+        
+        .presentation-container { 
+            width: 90%; 
+            max-width: 900px; 
+            height: 550px; 
+            background: white; 
+            position: relative; 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1); 
+            border-radius: 15px; 
+            display: flex; 
+            flex-direction: column; 
+        }
+
+        .slides-wrapper { flex: 1; position: relative; padding: 40px; overflow: hidden; }
+        
+        .slide { display: none; height: 100%; animation: fadeIn 0.6s ease; flex-direction: column; justify-content: center; }
+        .slide.active { display: flex; }
+        
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        
+        .level-badge { background: var(--accent); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; width: fit-content; margin-bottom: 20px; text-transform: uppercase; font-weight: bold; }
+        h2 { color: var(--primary); font-size: 2.2rem; margin: 0 0 15px 0; }
+        p { line-height: 1.6; font-size: 1.2rem; color: #555; }
+        
+        .highlights { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 25px; }
+        .card { background: #f8f9fa; padding: 15px; border-left: 4px solid var(--steam-gold); border-radius: 5px; font-size: 0.95rem; }
+        .card strong { color: var(--primary); display: block; margin-bottom: 5px; }
+        
+        .nav-controls { display: flex; justify-content: space-between; padding: 20px 40px; background: #f1f1f1; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; }
+        
+        button { background: var(--primary); color: white; border: none; padding: 10px 25px; border-radius: 5px; cursor: pointer; font-weight: bold; transition: 0.3s; }
+        button:hover { background: var(--accent); }
+        button:disabled { background: #ccc; cursor: not-allowed; }
+        
+        .progress-bar { position: absolute; top: 0; left: 0; height: 6px; background: var(--steam-gold); transition: width 0.3s; border-top-left-radius: 15px; }
+
+        /* Estilo corregido para tu nombre */
+        .pie-de-pagina {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            padding: 10px 0;
+            background: white;
+            border-top: 1px solid #eee;
+            font-weight: 300;
+        }
+    </style>
+</head>
+<body>
+
+<div class="presentation-container">
+    <div class="progress-bar" id="progress"></div>
+    
+    <div class="slides-wrapper">
+        <div class="slide active">
+            <div class="level-badge">Octavo año</div>
+            <h2>Perfeccionando la herramienta</h2>
+            <p>En este nivel, dejamos de aprender el idioma para empezar a dominarlo. Pulimos la gramática y ortografía como el código fuente de una comunicación eficiente.</p>
+            <div class="highlights">
+                <div class="card"><strong>STEAM:</strong> El lenguaje es el software del razonamiento lógico.</div>
+                <div class="card"><strong>Valores:</strong> Respeto y escucha activa en el diálogo.</div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="level-badge">Octavo año</div>
+            <h2>Literatura y pensamiento</h2>
+            <p>La comprensión literaria no es solo leer historias; es desarrollar la capacidad de analizar contextos y realidades complejas.</p>
+            <div class="highlights">
+                <div class="card"><strong>Análisis:</strong> Identificación de temas y estructuras.</div>
+                <div class="card"><strong>Empatía:</strong> Conexión con diversas perspectivas humanas.</div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="level-badge">Octavo año</div>
+            <h2>El lenguaje como poder</h2>
+            <p>Buscamos que el estudiante use la palabra para influir positivamente en su entorno, cimentando su identidad comunicativa.</p>
+            <div class="highlights">
+                <div class="card"><strong>Herramienta:</strong> Expresión clara de ideas técnicas.</div>
+                <div class="card"><strong>Propósito:</strong> Comunicación con integridad y valor.</div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="level-badge">Décimo año</div>
+            <h2>Hacia el rigor académico</h2>
+            <p>Iniciamos el entrenamiento estratégico para las Pruebas Nacionales, integrándolo con la producción de textos académicos de alto nivel.</p>
+            <div class="highlights">
+                <div class="card"><strong>Pruebas:</strong> Estrategias de comprensión y análisis.</div>
+                <div class="card"><strong>Rigor:</strong> Escritura formal y estructurada.</div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="level-badge">Décimo año</div>
+            <h2>Análisis de realidades</h2>
+            <p>Aprendemos a diferenciar textos literarios de los no literarios (científicos/informativos), vital para el éxito en áreas STEAM.</p>
+            <div class="highlights">
+                <div class="card"><strong>Pensamiento:</strong> Diferenciación entre dato y opinión.</div>
+                <div class="card"><strong>STEAM:</strong> Lectura crítica de informes técnicos.</div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="level-badge">Décimo año</div>
+            <h2>Ciudadanía ética</h2>
+            <p>El lenguaje es el medio para ejercer una ciudadanía responsable, donde la palabra se usa con honestidad intelectual.</p>
+            <div class="highlights">
+                <div class="card"><strong>Valores:</strong> Ética en la creación de argumentos.</div>
+                <div class="card"><strong>Impacto:</strong> Oratoria con conciencia social.</div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="level-badge">Undécimo año</div>
+            <h2>Excelencia y profesionalismo</h2>
+            <p>Es el año de la profesionalización. Pulimos cada habilidad trabajada anteriormente para asegurar una transición exitosa a la universidad.</p>
+            <div class="highlights">
+                <div class="card"><strong>Dominio:</strong> Redacción de nivel superior.</div>
+                <div class="card"><strong>Logro:</strong> Consolidación para Pruebas Nacionales.</div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="level-badge">Undécimo año</div>
+            <h2>Creadores de contenido</h2>
+            <p>Formamos estudiantes capaces de generar contenido académico y profesional que aporte valor real a la sociedad digital y científica.</p>
+            <div class="highlights">
+                <div class="card"><strong>STEAM:</strong> Comunicación de proyectos de innovación.</div>
+                <div class="card"><strong>Liderazgo:</strong> Mensajes que inspiran y transforman.</div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="level-badge">Undécimo año</div>
+            <h2>Justicia a través de la palabra</h2>
+            <p>Finalizamos el ciclo entendiendo que el buen uso del idioma es una herramienta de justicia social y crecimiento personal ilimitado.</p>
+            <div class="highlights">
+                <div class="card"><strong>Compromiso:</strong> Liderazgo ético en la comunidad.</div>
+                <div class="card"><strong>Éxito:</strong> La palabra como su mayor ventaja competitiva.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pie-de-pagina">
+        Danny Andrey Chaves Gamboa
+    </div>
+
+    <div class="nav-controls">
+        <button id="prevBtn" onclick="changeSlide(-1)" disabled>Anterior</button>
+        <button id="nextBtn" onclick="changeSlide(1)">Siguiente</button>
+    </div>
+</div>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const progressBar = document.getElementById('progress');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    function updateNav() {
+        slides.forEach((slide, index) => { slide.classList.toggle('active', index === currentSlide); });
+        const progressPercent = ((currentSlide + 1) / slides.length) * 100;
+        progressBar.style.width = `${progressPercent}%`;
+        prevBtn.disabled = currentSlide === 0;
+        nextBtn.disabled = currentSlide === slides.length - 1;
+        nextBtn.innerText = currentSlide === slides.length - 1 ? "Finalizar" : "Siguiente";
+    }
+
+    function changeSlide(direction) {
+        currentSlide += direction;
+        updateNav();
+    }
+</script>
+
+</body>
+</html>
